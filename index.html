@@ -10,8 +10,10 @@
 
   <body class="">
     <!-- This section is for the header  -->
-    <header class="bg-[#2042B6] text-white">
-      <nav class="xl:w-[1315px] mx-auto p-[25px] flex justify-between">
+    <header class="bg-[#2042B6] fixed text-white fixed w-full z-50">
+      <nav
+        class="xl:w-[1315px] bg-red-500 mx-auto p-[25px] flex justify-between relative"
+      >
         <a href="#">
           <img src="./images/logos/logo-white.png" />
         </a>
@@ -20,15 +22,29 @@
           <li class="mr-[10px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 24 24"
+              width="35"
+              height="35"
+              viewBox="0 0 14 14"
+              fill="none"
               class="border border-white rounded-full px-2 py-2"
             >
-              <path
-                fill="currentColor"
-                d="M18 22q-1.25 0-2.125-.875T15 19q0-.175.025-.363t.075-.337l-7.05-4.1q-.425.375-.95.588T6 15q-1.25 0-2.125-.875T3 12t.875-2.125T6 9q.575 0 1.1.213t.95.587l7.05-4.1q-.05-.15-.075-.337T15 5q0-1.25.875-2.125T18 2t2.125.875T21 5t-.875 2.125T18 8q-.575 0-1.1-.212t-.95-.588L8.9 11.3q.05.15.075.338T9 12t-.025.363t-.075.337l7.05 4.1q.425-.375.95-.587T18 16q1.25 0 2.125.875T21 19t-.875 2.125T18 22"
-              />
+              <mask
+                id="mask0_1_1010"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="14"
+                height="14"
+              >
+                <rect width="14" height="14" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_1_1010)">
+                <path
+                  d="M10.5 12.8334C10.0139 12.8334 9.60069 12.6633 9.26042 12.323C8.92014 11.9827 8.75 11.5695 8.75 11.0834C8.75 11.0154 8.75486 10.9449 8.76458 10.872C8.77431 10.799 8.78889 10.7334 8.80833 10.6751L4.69583 8.28342C4.53056 8.42925 4.34583 8.54348 4.14167 8.62612C3.9375 8.70876 3.72361 8.75008 3.5 8.75008C3.01389 8.75008 2.60069 8.57994 2.26042 8.23967C1.92014 7.89939 1.75 7.48619 1.75 7.00008C1.75 6.51397 1.92014 6.10078 2.26042 5.7605C2.60069 5.42022 3.01389 5.25008 3.5 5.25008C3.72361 5.25008 3.9375 5.2914 4.14167 5.37404C4.34583 5.45668 4.53056 5.57092 4.69583 5.71675L8.80833 3.32508C8.78889 3.26675 8.77431 3.20112 8.76458 3.12821C8.75486 3.05529 8.75 2.9848 8.75 2.91675C8.75 2.43064 8.92014 2.01744 9.26042 1.67716C9.60069 1.33689 10.0139 1.16675 10.5 1.16675C10.9861 1.16675 11.3993 1.33689 11.7396 1.67716C12.0799 2.01744 12.25 2.43064 12.25 2.91675C12.25 3.40286 12.0799 3.81605 11.7396 4.15633C11.3993 4.49661 10.9861 4.66675 10.5 4.66675C10.2764 4.66675 10.0625 4.62543 9.85833 4.54279C9.65417 4.46015 9.46944 4.34592 9.30417 4.20008L5.19167 6.59175C5.21111 6.65008 5.22569 6.71571 5.23542 6.78862C5.24514 6.86154 5.25 6.93203 5.25 7.00008C5.25 7.06814 5.24514 7.13862 5.23542 7.21154C5.22569 7.28446 5.21111 7.35008 5.19167 7.40841L9.30417 9.80008C9.46944 9.65425 9.65417 9.54001 9.85833 9.45737C10.0625 9.37473 10.2764 9.33342 10.5 9.33342C10.9861 9.33342 11.3993 9.50355 11.7396 9.84383C12.0799 10.1841 12.25 10.5973 12.25 11.0834C12.25 11.5695 12.0799 11.9827 11.7396 12.323C11.3993 12.6633 10.9861 12.8334 10.5 12.8334Z"
+                  fill="white"
+                />
+              </g>
             </svg>
           </li>
           <li class="mr-[20px] border border-white rounded-3xl px-4 py-[5px]">
@@ -40,6 +56,8 @@
               width="2em"
               height="2em"
               viewBox="0 0 24 24"
+              id="open-menu"
+              class="cursor-pointer"
             >
               <path
                 fill="currentColor"
@@ -49,15 +67,130 @@
             </svg>
           </li>
         </ul>
+
+        <!-- interactive navigation menu here  -->
+        <div
+          id="main-menu"
+          class="nav-menu invisible absolute top-[2px] right-[2px] rounded-[18px] bg-white w-[338px] h-[500px] pl-[36px] pt-[28px] pr-[25px]"
+        >
+          <!-- menu header button  -->
+          <div class="flex justify-between items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 14 14"
+              fill="none"
+              class="bg-[#AFCD80] rounded-full px-3 py-3"
+            >
+              <mask
+                id="mask0_1_1544"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="14"
+                height="14"
+              >
+                <rect width="14" height="14" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_1_1544)">
+                <path
+                  d="M10.5 12.8334C10.0139 12.8334 9.60069 12.6633 9.26042 12.323C8.92014 11.9827 8.75 11.5695 8.75 11.0834C8.75 11.0154 8.75486 10.9449 8.76458 10.872C8.77431 10.799 8.78889 10.7334 8.80833 10.6751L4.69583 8.28342C4.53056 8.42925 4.34583 8.54348 4.14167 8.62612C3.9375 8.70876 3.72361 8.75008 3.5 8.75008C3.01389 8.75008 2.60069 8.57994 2.26042 8.23967C1.92014 7.89939 1.75 7.48619 1.75 7.00008C1.75 6.51397 1.92014 6.10078 2.26042 5.7605C2.60069 5.42022 3.01389 5.25008 3.5 5.25008C3.72361 5.25008 3.9375 5.2914 4.14167 5.37404C4.34583 5.45668 4.53056 5.57092 4.69583 5.71675L8.80833 3.32508C8.78889 3.26675 8.77431 3.20112 8.76458 3.12821C8.75486 3.05529 8.75 2.9848 8.75 2.91675C8.75 2.43064 8.92014 2.01744 9.26042 1.67716C9.60069 1.33689 10.0139 1.16675 10.5 1.16675C10.9861 1.16675 11.3993 1.33689 11.7396 1.67716C12.0799 2.01744 12.25 2.43064 12.25 2.91675C12.25 3.40286 12.0799 3.81605 11.7396 4.15633C11.3993 4.49661 10.9861 4.66675 10.5 4.66675C10.2764 4.66675 10.0625 4.62543 9.85833 4.54279C9.65417 4.46015 9.46944 4.34592 9.30417 4.20008L5.19167 6.59175C5.21111 6.65008 5.22569 6.71571 5.23542 6.78862C5.24514 6.86154 5.25 6.93203 5.25 7.00008C5.25 7.06814 5.24514 7.13862 5.23542 7.21154C5.22569 7.28446 5.21111 7.35008 5.19167 7.40841L9.30417 9.80008C9.46944 9.65425 9.65417 9.54001 9.85833 9.45737C10.0625 9.37473 10.2764 9.33342 10.5 9.33342C10.9861 9.33342 11.3993 9.50355 11.7396 9.84383C12.0799 10.1841 12.25 10.5973 12.25 11.0834C12.25 11.5695 12.0799 11.9827 11.7396 12.323C11.3993 12.6633 10.9861 12.8334 10.5 12.8334Z"
+                  fill="white"
+                />
+              </g>
+            </svg>
+
+            <a
+              href="#"
+              class="bg-[#2042B6] text-[12px] rounded-full px-[16px] py-[17px]"
+            >
+              Download the 2024 Report
+            </a>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 16 16"
+              fill="none"
+              id="close-menu"
+              class="cursor-pointer p-2"
+            >
+              <rect
+                x="0.928909"
+                y="14.364"
+                width="19"
+                height="1"
+                transform="rotate(-45 0.928909 14.364)"
+                fill="white"
+                stroke="#191618"
+              />
+              <rect
+                x="1.63684"
+                y="0.928298"
+                width="19"
+                height="1"
+                transform="rotate(45 1.63684 0.928298)"
+                fill="white"
+                stroke="#191618"
+              />
+            </svg>
+          </div>
+
+          <!-- navbar menu lists here  -->
+          <ul class="mt-[33px]">
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">The WPPOOL Index</a>
+            </li>
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">All Companies</a>
+            </li>
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">Potential Future Listings</a>
+            </li>
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">State of USA</a>
+            </li>
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">Stories & Ideas</a>
+            </li>
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">About WPPOOL</a>
+            </li>
+            <li
+              class="text-[#191618] text-[18px] leading-[120%] font-[400] mb-[24px]"
+            >
+              <a href="#">WPPOOL Portfolio Companies</a>
+            </li>
+          </ul>
+          <a
+            class="mt-[36px] text-[#2042B6] text-[21px] font-[400] leading-[120%]"
+            >Visit WPPOOL</a
+          >
+        </div>
       </nav>
     </header>
 
     <!-- hero section starts here  -->
     <section
-      class="hero-section bg-[#2042B6] xl:h-[600px] bg-[url('./images/bg-objects/hero-bg.png')] bg-no-repeat bg-center bg-blend-multiply"
+      class="hero-section bg-[#2042B6] xl:h-[720px] bg-[url('./images/bg-objects/hero-bg.png')] bg-no-repeat bg-center bg-blend-multiply"
     >
       <div
-        class="xl:w-[1315px] mx-auto px-[25px] h-full flex flex-col justify-center items-center relative"
+        class="xl:w-[1315px] mx-auto px-[25px] h-full flex flex-col bg-[url('./images/bg-objects/hero-rectangle.png')] bg-no-repeat bg-center justify-center items-center relative"
       >
         <!-- hero main text  -->
         <div class="text-center text-white absolute">
@@ -73,7 +206,7 @@
         <!-- statistics and button  -->
         <div class="flex justify-between items-end flex-grow">
           <div class="absolute left-[45px] bottom-[40px]">
-            <p class="flex flex-col">
+            <p class="flex flex-col mt-[50px]">
               <span class="text-[36px] leading-[50px] font-[400] text-white"
                 >60</span
               >
@@ -82,7 +215,7 @@
               >
             </p>
 
-            <p class="flex flex-col">
+            <p class="flex flex-col mt-[50px]">
               <span class="text-[36px] leading-[50px] font-[400] text-white"
                 >$100B</span
               >
@@ -91,7 +224,7 @@
               >
             </p>
 
-            <p class="flex flex-col">
+            <p class="flex flex-col mt-[50px]">
               <span class="text-[36px] leading-[50px] font-[400] text-white"
                 >$3.5x</span
               >
@@ -100,7 +233,7 @@
               >
             </p>
 
-            <p class="flex flex-col">
+            <p class="flex flex-col mt-[50px]">
               <span class="text-[36px] leading-[50px] font-[400] text-white"
                 >60%</span
               >
@@ -126,6 +259,18 @@
         </div>
       </div>
     </section>
+
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
+    <section class="h-[100px]">Hi</section>
     <script src="./js/script.js"></script>
   </body>
 </html>
