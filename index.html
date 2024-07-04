@@ -12,7 +12,7 @@
     <!-- This section is for the header  -->
     <header class="bg-[#2042B6] fixed text-white fixed w-full z-50">
       <nav
-        class="xl:w-[1315px] bg-red-500 mx-auto p-[25px] flex justify-between relative"
+        class="xl:w-[1310px] mx-auto px-[10px] md:pl-[36px] py-[34px] md:pr-[25px] flex justify-between items-center relative"
       >
         <a href="#">
           <img src="./images/logos/logo-white.png" />
@@ -47,7 +47,9 @@
               </g>
             </svg>
           </li>
-          <li class="mr-[20px] border border-white rounded-3xl px-4 py-[5px]">
+          <li
+            class="hidden md:block mr-[20px] border border-white rounded-3xl px-4 py-[5px]"
+          >
             Download the 2024 Report
           </li>
           <li>
@@ -187,14 +189,16 @@
 
     <!-- hero section starts here  -->
     <section
-      class="hero-section bg-[#2042B6] xl:h-[720px] bg-[url('./images/bg-objects/hero-bg.png')] bg-no-repeat bg-center bg-blend-multiply"
+      class="hero-section bg-[#2042B6] h-[720px] xl:h-[720px] bg-[url('./images/bg-objects/hero-bg.png')] bg-no-repeat bg-center bg-blend-multiply"
     >
       <div
-        class="xl:w-[1315px] mx-auto px-[25px] h-full flex flex-col bg-[url('./images/bg-objects/hero-rectangle.png')] bg-no-repeat bg-center justify-center items-center relative"
+        class="xl:w-[1310px] mx-auto px-[10px] md:px-[44px] h-full flex flex-col bg-[url('./images/bg-objects/hero-rectangle.png')] bg-no-repeat bg-center justify-center items-center relative"
       >
         <!-- hero main text  -->
         <div class="text-center text-white absolute">
-          <h1 class="text-[78px] leading-[100px] font-[400] text-white">
+          <h1
+            class="text-[35px] md:text-[50px] lg:text-[78px] leading-[70px] md:leading-[100px] font-[400] text-white"
+          >
             The WPPOOL Index
           </h1>
           <p class="text-[21px] leading-[25px] font-[350] text-white">
@@ -205,50 +209,62 @@
 
         <!-- statistics and button  -->
         <div class="flex justify-between items-end flex-grow">
-          <div class="absolute left-[45px] bottom-[40px]">
-            <p class="flex flex-col mt-[50px]">
-              <span class="text-[36px] leading-[50px] font-[400] text-white"
+          <div
+            class="absolute flex md:flex-col gap-[10px] md:gap-[50px] left-[10px] md:left-[45px] bottom-[40px]"
+          >
+            <p class="flex flex-col">
+              <span
+                class="text-center md:text-left text-[24px] md:text-[36px] md:leading-[50px] font-[400] text-white"
                 >60</span
               >
-              <span class="text-[16px] leading-[24px] font-[400] text-[#CDCDCD]"
+              <span
+                class="text-[14px] text-center md:text-left md:text-[16px] md:leading-[24px] font-[400] text-[#CDCDCD]"
                 >Companies</span
               >
             </p>
 
-            <p class="flex flex-col mt-[50px]">
-              <span class="text-[36px] leading-[50px] font-[400] text-white"
+            <p class="flex flex-col">
+              <span
+                class="text-center md:text-left text-[24px] md:text-[36px] md:leading-[50px] font-[400] text-white"
                 >$100B</span
               >
-              <span class="text-[16px] leading-[24px] font-[400] text-[#CDCDCD]"
+              <span
+                class="text-[14px] text-center md:text-left md:text-[16px] md:leading-[24px] font-[400] text-[#CDCDCD]"
                 >Market cap</span
               >
             </p>
 
-            <p class="flex flex-col mt-[50px]">
-              <span class="text-[36px] leading-[50px] font-[400] text-white"
+            <p class="flex flex-col">
+              <span
+                class="text-center md:text-left text-[24px] md:text-[36px] md:leading-[50px] font-[400] text-white"
                 >$3.5x</span
               >
-              <span class="text-[16px] leading-[24px] font-[400] text-[#CDCDCD]"
+              <span
+                class="text-[14px] text-center md:text-left md:text-[16px] md:leading-[24px] font-[400] text-[#CDCDCD]"
                 >Revenue multiple</span
               >
             </p>
 
-            <p class="flex flex-col mt-[50px]">
-              <span class="text-[36px] leading-[50px] font-[400] text-white"
+            <p class="flex flex-col">
+              <span
+                class="text-center md:text-left text-[24px] md:text-[36px] md:leading-[50px] font-[400] text-white"
                 >60%</span
               >
-              <span class="text-[16px] leading-[24px] font-[400] text-[#CDCDCD]"
+              <span
+                class="text-[14px] text-center md:text-left md:text-[16px] md:leading-[24px] font-[400] text-[#CDCDCD]"
                 >LTM avg. revenue growth rate</span
               >
             </p>
           </div>
-          <div class="absolute right-[45px] bottom-[40px]">
+          <div
+            class="absolute right-[10px] md:right-[45px] bottom-[0px] md:bottom-[40px]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="3.5em"
               height="3.5em"
               viewBox="0 0 256 256"
-              class="text-[#2042B6] bg-white rounded-full p-4"
+              class="text-[#2042B6] bg-white rounded-full p-1 md:p-4"
             >
               <path
                 fill="currentColor"
