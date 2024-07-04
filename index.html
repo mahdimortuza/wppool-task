@@ -10,13 +10,12 @@
 
   <body class="">
     <!-- This section is for the header  -->
-    <header class="bg-[#2042B6] fixed text-white fixed w-full z-50">
+    <header id="main-header" class="mx-auto z-50">
       <nav
-        class="xl:w-[1310px] mx-auto px-[10px] md:pl-[36px] py-[34px] md:pr-[25px] flex justify-between items-center relative"
+        id="main-navbar"
+        class="xl:w-[1310px] mx-auto px-[10px] md:pl-[25px] md:pr-[25px] flex justify-between items-center relative"
       >
-        <a href="#">
-          <img src="./images/logos/logo-white.png" />
-        </a>
+        <a href="#" id="main-logo"> </a>
         <!-- menu item  -->
         <ul class="flex justify-between items-center">
           <li class="mr-[10px]">
@@ -26,7 +25,8 @@
               height="35"
               viewBox="0 0 14 14"
               fill="none"
-              class="border border-white rounded-full px-2 py-2"
+              id="share-btn"
+              class="border share-btn-green rounded-full px-2 py-2"
             >
               <mask
                 id="mask0_1_1010"
@@ -42,13 +42,14 @@
               <g mask="url(#mask0_1_1010)">
                 <path
                   d="M10.5 12.8334C10.0139 12.8334 9.60069 12.6633 9.26042 12.323C8.92014 11.9827 8.75 11.5695 8.75 11.0834C8.75 11.0154 8.75486 10.9449 8.76458 10.872C8.77431 10.799 8.78889 10.7334 8.80833 10.6751L4.69583 8.28342C4.53056 8.42925 4.34583 8.54348 4.14167 8.62612C3.9375 8.70876 3.72361 8.75008 3.5 8.75008C3.01389 8.75008 2.60069 8.57994 2.26042 8.23967C1.92014 7.89939 1.75 7.48619 1.75 7.00008C1.75 6.51397 1.92014 6.10078 2.26042 5.7605C2.60069 5.42022 3.01389 5.25008 3.5 5.25008C3.72361 5.25008 3.9375 5.2914 4.14167 5.37404C4.34583 5.45668 4.53056 5.57092 4.69583 5.71675L8.80833 3.32508C8.78889 3.26675 8.77431 3.20112 8.76458 3.12821C8.75486 3.05529 8.75 2.9848 8.75 2.91675C8.75 2.43064 8.92014 2.01744 9.26042 1.67716C9.60069 1.33689 10.0139 1.16675 10.5 1.16675C10.9861 1.16675 11.3993 1.33689 11.7396 1.67716C12.0799 2.01744 12.25 2.43064 12.25 2.91675C12.25 3.40286 12.0799 3.81605 11.7396 4.15633C11.3993 4.49661 10.9861 4.66675 10.5 4.66675C10.2764 4.66675 10.0625 4.62543 9.85833 4.54279C9.65417 4.46015 9.46944 4.34592 9.30417 4.20008L5.19167 6.59175C5.21111 6.65008 5.22569 6.71571 5.23542 6.78862C5.24514 6.86154 5.25 6.93203 5.25 7.00008C5.25 7.06814 5.24514 7.13862 5.23542 7.21154C5.22569 7.28446 5.21111 7.35008 5.19167 7.40841L9.30417 9.80008C9.46944 9.65425 9.65417 9.54001 9.85833 9.45737C10.0625 9.37473 10.2764 9.33342 10.5 9.33342C10.9861 9.33342 11.3993 9.50355 11.7396 9.84383C12.0799 10.1841 12.25 10.5973 12.25 11.0834C12.25 11.5695 12.0799 11.9827 11.7396 12.323C11.3993 12.6633 10.9861 12.8334 10.5 12.8334Z"
-                  fill="white"
+                  fill="currentColor"
                 />
               </g>
             </svg>
           </li>
           <li
-            class="hidden md:block mr-[20px] border border-white rounded-3xl px-4 py-[5px]"
+            id="download-btn"
+            class="hidden md:block mr-3 border rounded-3xl px-4 py-[5px]"
           >
             Download the 2024 Report
           </li>
@@ -106,7 +107,7 @@
 
             <a
               href="#"
-              class="bg-[#2042B6] text-[12px] rounded-full px-[16px] py-[17px]"
+              class="bg-[#2042B6] text-[12px] rounded-full px-[16px] py-[17px] text-white"
             >
               Download the 2024 Report
             </a>
@@ -189,7 +190,7 @@
 
     <!-- hero section starts here  -->
     <section
-      class="hero-section bg-[#2042B6] h-[720px] xl:h-[720px] bg-[url('./images/bg-objects/hero-bg.png')] bg-no-repeat bg-center bg-blend-multiply"
+      class="hero-section bg-[#2042B6] h-[680px] xl:h-[720px] bg-[url('./images/bg-objects/hero-bg.png')] bg-no-repeat bg-center bg-blend-multiply"
     >
       <div
         class="xl:w-[1310px] mx-auto px-[10px] md:px-[44px] h-full flex flex-col bg-[url('./images/bg-objects/hero-rectangle.png')] bg-no-repeat bg-center justify-center items-center relative"
@@ -276,17 +277,208 @@
       </div>
     </section>
 
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
-    <section class="h-[100px]">Hi</section>
+    <!-- statistics graph starts here  -->
+    <section class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-[100vh]">
+      <div class="mt-[20px] flex gap-6">
+        <!-- sidebar menu starts here  -->
+        <aside
+          class="w-[224px] h-[600px] bg-[#EFF3F6] rounded-[14px] px-2 py-2"
+        >
+          <ul class="">
+            <li class="bg-[#2042B6] rounded-[6px] text-white text-4">
+              <a
+                href="#"
+                class="px-[10px] py-3 flex justify-between items-center"
+                >The Index <span>-</span></a
+              >
+            </li>
+
+            <li class="rounded-[6px] text-[#647888] text-4">
+              <a
+                href="#"
+                class="px-[10px] py-3 flex justify-between items-center"
+                >The Index Tab Two <span>+</span></a
+              >
+            </li>
+
+            <li class="rounded-[6px] text-[#647888] text-4">
+              <a
+                href="#"
+                class="px-[10px] py-3 flex justify-between items-center"
+                >The Index Tab Three <span>+</span></a
+              >
+            </li>
+
+            <li class="rounded-[6px] text-[#647888] text-4">
+              <a
+                href="#"
+                class="px-[10px] py-3 flex justify-between items-center"
+                >The Index Tab Four <span>+</span></a
+              >
+            </li>
+
+            <li class="rounded-[6px] text-[#647888] text-4">
+              <a
+                href="#"
+                class="px-[10px] py-3 flex justify-between items-center"
+                >The Index Tab Five <span>+</span></a
+              >
+            </li>
+          </ul>
+        </aside>
+
+        <!-- graph chart starts here   -->
+        <div class="mt-[5px]">
+          <!-- chart header image and text  -->
+          <div class="flex gap-1">
+            <img src="./images/objects/Union.svg" />
+            <h2 class="text-[#191618] text-[36px] font-[400]">
+              The WPPOOL Index
+            </h2>
+          </div>
+
+          <!-- chart stat  -->
+          <div
+            class="mt-[10px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]"
+          >
+            <div
+              class="h-[50px] w-[230px] bg-[#F3F3F3] flex justify-between items-center px-[10px] py-[10px] rounded-[6px]"
+            >
+              <p class="text-[#FC714D] text-[30px]">+66.2%</p>
+              <div class="flex gap-2 items-center">
+                <p class="text-[12px] leading-[120%] text-right">
+                  WPPOOL <br />
+                  Index
+                </p>
+                <div class="h-[30px] w-[4px] bg-[#FC714D] rounded-[1px]"></div>
+              </div>
+            </div>
+
+            <div
+              class="h-[50px] w-[230px] bg-[#F3F3F3] flex justify-between items-center px-[10px] py-[10px] rounded-[6px]"
+            >
+              <p class="text-[#615DE3] text-[30px]">+26.6%</p>
+              <div class="flex gap-2">
+                <p class="text-[12px] leading-[120%] text-right">
+                  Goolge <br />
+                  Index
+                </p>
+                <div class="h-[30px] w-[4px] bg-[#615DE3] rounded-[1px]"></div>
+              </div>
+            </div>
+
+            <div
+              class="h-[50px] w-[230px] bg-[#F3F3F3] flex justify-between items-center px-[10px] py-[10px] rounded-[6px]"
+            >
+              <p class="text-[#7CA63A] text-[30px]">+34.1%</p>
+              <div class="flex gap-2 items-center items-center">
+                <p class="text-[12px] leading-[120%] text-right">Microsoft</p>
+                <div class="h-[30px] w-[4px] bg-[#7CA63A] rounded-[1px]"></div>
+              </div>
+            </div>
+
+            <div
+              class="h-[50px] w-[230px] bg-[#F3F3F3] flex justify-between items-center px-[10px] py-[10px] rounded-[6px]"
+            >
+              <p class="text-[#6F34A1] text-[30px]">+17%</p>
+              <div class="flex gap-2 items-center">
+                <p class="text-[12px] leading-[120%] text-right">
+                  Twitter <br />
+                  Index
+                </p>
+                <div class="h-[30px] w-[4px] bg-[#6F34A1] rounded-[1px]"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- chart dropdown  -->
+          <div class="mt-[21px] flex justify-between items-center">
+            <div class="flex gap-3">
+              <div
+                class="bg-[#2042B6] w-[178px] h-[26px] flex justify-between items-center text-white px-[10px] py-[9xp] rounded-full"
+              >
+                <p class="text-[12px] font-[400]">Sectors</p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_1_1133"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                  >
+                    <rect width="20" height="20" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1133)">
+                    <path
+                      d="M9.4177 11.9173L7.25104 9.75065C6.98715 9.48676 6.92812 9.18468 7.07395 8.8444C7.21979 8.50412 7.4802 8.33398 7.8552 8.33398H12.1469C12.5219 8.33398 12.7823 8.50412 12.9281 8.8444C13.074 9.18468 13.0149 9.48676 12.751 9.75065L10.5844 11.9173C10.501 12.0007 10.4108 12.0632 10.3135 12.1048C10.2163 12.1465 10.1121 12.1673 10.001 12.1673C9.88993 12.1673 9.78576 12.1465 9.68854 12.1048C9.59132 12.0632 9.50104 12.0007 9.4177 11.9173Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </div>
+
+              <div
+                class="bg-[#2042B6] w-[178px] h-[26px] flex justify-between items-center text-white px-[10px] py-[9xp] rounded-full"
+              >
+                <p class="text-[12px] font-[400]">Types of IPO</p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_1_1133"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                  >
+                    <rect width="20" height="20" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1133)">
+                    <path
+                      d="M9.4177 11.9173L7.25104 9.75065C6.98715 9.48676 6.92812 9.18468 7.07395 8.8444C7.21979 8.50412 7.4802 8.33398 7.8552 8.33398H12.1469C12.5219 8.33398 12.7823 8.50412 12.9281 8.8444C13.074 9.18468 13.0149 9.48676 12.751 9.75065L10.5844 11.9173C10.501 12.0007 10.4108 12.0632 10.3135 12.1048C10.2163 12.1465 10.1121 12.1673 10.001 12.1673C9.88993 12.1673 9.78576 12.1465 9.68854 12.1048C9.59132 12.0632 9.50104 12.0007 9.4177 11.9173Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#EFF3F6] w-[232px] h-[30px] rounded-full flex gap-[20px] items-center justify-end px-[14px]"
+            >
+              <span class="text-[#748DA1] text-[12px]">1Y</span>
+              <span class="text-[#748DA1] text-[12px]">YTD</span>
+              <span
+                class="text-[#748DA1] text-[12px] bg-[#2042B6] px-[8px] py-[4px] rounded-full"
+                >6M</span
+              >
+              <span class="text-[#748DA1] text-[12px]">1M</span>
+              <span class="text-[#748DA1] text-[12px]">1W</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="xl:w-[1310px] mx-auto px-[10px] bg-[#EFF36] h-[100vh]">
+      Hi
+    </section>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

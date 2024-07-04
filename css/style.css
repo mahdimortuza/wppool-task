@@ -3,3 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  background-color: #2042b6;
+  color: #fff;
+  width: 100%;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #f3f3f3;
+  color: #191618;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  width: 1310px;
+  border-radius: 8px;
+}
+
+.share-btn-green {
+  border-color: #afcd80;
+}
+
+.share-btn-white {
+  border-color: white;
+}
+
+.download-btn-blue {
+  border-color: #115cd9;
+}
+
+.download-btn-white {
+  border-color: white;
+}
