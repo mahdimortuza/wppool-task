@@ -39,3 +39,67 @@
 .download-btn-white {
   border-color: white;
 }
+
+#chart {
+  border: 1px solid #9fa0a1;
+  margin-top: 20px;
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.apexcharts-legend .apexcharts-align-center .apx-legend-position-bottom {
+  padding-top: 25px;
+}
+
+.apexcharts-legend-series {
+  display: flex;
+  justify-items: center;
+  margin-top: 25px;
+}
+
+.apexcharts-legend-marker {
+  border-radius: 0px !important;
+  margin-left: 5px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f3f3f3;
+  border-radius: 6px;
+}
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(odd) td:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+tbody tr:nth-child(odd) td:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* changing scrollbar style  */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #2042b6;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #2042b6;
+}

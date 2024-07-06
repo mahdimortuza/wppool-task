@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <title>wp-pool</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
@@ -278,14 +280,14 @@
     </section>
 
     <!-- statistics graph starts here  -->
-    <section class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-[100vh]">
-      <div class="mt-[20px] flex gap-6">
+    <section class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-full">
+      <div class="mt-[20px] flex flex-col md:flex-row gap-6">
         <!-- sidebar menu starts here  -->
         <aside
-          class="w-[224px] h-[600px] bg-[#EFF3F6] rounded-[14px] px-2 py-2"
+          class="w-full md:w-[224px] h-full md:h-[600px] bg-[#EFF3F6] rounded-[14px] px-2 py-2"
         >
-          <ul class="">
-            <li class="bg-[#2042B6] rounded-[6px] text-white text-4">
+          <ul class="grid grid-cols-2 md:grid-cols-1">
+            <li class="bg-[#2042B6] rounded-[6px] text-white text-3 md:text-4">
               <a
                 href="#"
                 class="px-[10px] py-3 flex justify-between items-center"
@@ -293,7 +295,7 @@
               >
             </li>
 
-            <li class="rounded-[6px] text-[#647888] text-4">
+            <li class="rounded-[6px] text-[#647888] text-3 md:text-4">
               <a
                 href="#"
                 class="px-[10px] py-3 flex justify-between items-center"
@@ -301,7 +303,7 @@
               >
             </li>
 
-            <li class="rounded-[6px] text-[#647888] text-4">
+            <li class="rounded-[6px] text-[#647888] text-3 md:text-4">
               <a
                 href="#"
                 class="px-[10px] py-3 flex justify-between items-center"
@@ -309,7 +311,7 @@
               >
             </li>
 
-            <li class="rounded-[6px] text-[#647888] text-4">
+            <li class="rounded-[6px] text-[#647888] text-3 md:text-4">
               <a
                 href="#"
                 class="px-[10px] py-3 flex justify-between items-center"
@@ -317,11 +319,19 @@
               >
             </li>
 
-            <li class="rounded-[6px] text-[#647888] text-4">
+            <li class="rounded-[6px] text-[#647888] text-3 md:text-4">
               <a
                 href="#"
                 class="px-[10px] py-3 flex justify-between items-center"
                 >The Index Tab Five <span>+</span></a
+              >
+            </li>
+
+            <li class="rounded-[6px] text-[#647888] text-3 md:text-4">
+              <a
+                href="#"
+                class="px-[10px] py-3 flex justify-between items-center"
+                >The Index Tab Six <span>+</span></a
               >
             </li>
           </ul>
@@ -329,17 +339,17 @@
 
         <!-- graph chart starts here   -->
         <div class="mt-[5px]">
-          <!-- chart header image and text  -->
+          <!-- chart header image and text -->
           <div class="flex gap-1">
             <img src="./images/objects/Union.svg" />
-            <h2 class="text-[#191618] text-[36px] font-[400]">
+            <h2 class="text-[#191618] text-[30px] font-[400]">
               The WPPOOL Index
             </h2>
           </div>
 
-          <!-- chart stat  -->
+          <!-- - chart stat -->
           <div
-            class="mt-[10px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]"
+            class="mt-[10px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-[20px]"
           >
             <div
               class="h-[50px] w-[230px] bg-[#F3F3F3] flex justify-between items-center px-[10px] py-[10px] rounded-[6px]"
@@ -391,9 +401,11 @@
             </div>
           </div>
 
-          <!-- chart dropdown  -->
-          <div class="mt-[21px] flex justify-between items-center">
-            <div class="flex gap-3">
+          <!-- -- chart dropdown -->
+          <div
+            class="mt-[21px] flex flex-col md:flex-row md:justify-between items-center gap-3"
+          >
+            <div class="flex flex-col md:flex-row gap-3">
               <div
                 class="bg-[#2042B6] w-[178px] h-[26px] flex justify-between items-center text-white px-[10px] py-[9xp] rounded-full"
               >
@@ -472,13 +484,298 @@
               <span class="text-[#748DA1] text-[12px]">1W</span>
             </div>
           </div>
+          <!-- -- main chart here  -->
+          <div id="chart"></div>
         </div>
       </div>
     </section>
-    <section class="xl:w-[1310px] mx-auto px-[10px] bg-[#EFF36] h-[100vh]">
-      Hi
+
+    <!-- table section starts from here  -->
+    <section
+      class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-full mt-[35px] md:mt-[50px]"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <h1
+          class="text-[#191618] text-[40px] md:text-[48px] font-[400] px-[22px]"
+        >
+          All Companies
+        </h1>
+
+        <!-- search input form  -->
+        <form class="md:max-w-md">
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only text-[#191618]"
+            >Search</label
+          >
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <mask
+                  id="mask0_1_768"
+                  style="mask-type: alpha"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="24"
+                  height="24"
+                >
+                  <rect width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_1_768)">
+                  <path
+                    d="M9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L20.3 18.9C20.4833 19.0833 20.575 19.3167 20.575 19.6C20.575 19.8833 20.4833 20.1167 20.3 20.3C20.1167 20.4833 19.8833 20.575 19.6 20.575C19.3167 20.575 19.0833 20.4833 18.9 20.3L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                    fill="#191618"
+                  />
+                </g>
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-2 ps-10 text-sm md:text-[24px] text-[#191618] border border-[#DADADA] rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search Companies"
+              required
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- main table starts here  -->
+
+      <table
+        class="w-full mt-[56px] px-0 md:px-[30px] bg-[#fff] overflow-y-auto block h-[400px]"
+      >
+        <thead class="">
+          <tr class="text-[#000000]">
+            <th class="py-2 px-6 text-left text-[#000] text-[16px]">Company</th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">
+              <select class="bg-white">
+                <option>Ticker</option>
+              </select>
+            </th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">Vertical</th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">Price</th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">
+              Market Cap ($B)
+            </th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">
+              Revenue Growth
+            </th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">
+              Gross Margin
+            </th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">
+              EV/Revenue
+            </th>
+            <th class="py-2 px-6 text-left font-[400] text-[14px]">
+              YTD Performance
+            </th>
+          </tr>
+        </thead>
+        <tbody class="text-[#000] text-[16px] font-[400]">
+          <tr class="">
+            <td class="py-2 px-6 text-left">Adyen</td>
+            <td class="py-2 px-6 text-left">AFRM</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$17.15</td>
+            <td class="py-2 px-6 text-left">$50.5</td>
+            <td class="py-2 px-6 text-left">49.0%</td>
+            <td class="py-2 px-6 text-left">15.8%</td>
+            <td class="py-2 px-6 text-left">6.3</td>
+            <td class="py-2 px-6 text-left">24.3%</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-6 text-left">Square</td>
+            <td class="py-2 px-6 text-left">SQ</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$231.78</td>
+            <td class="py-2 px-6 text-left">$98.5</td>
+            <td class="py-2 px-6 text-left">50.3%</td>
+            <td class="py-2 px-6 text-left">20.2%</td>
+            <td class="py-2 px-6 text-left">10.1</td>
+            <td class="py-2 px-6 text-left">15.6%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">Adyen</td>
+            <td class="py-2 px-6 text-left">AFRM</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$17.15</td>
+            <td class="py-2 px-6 text-left">$50.5</td>
+            <td class="py-2 px-6 text-left">49.0%</td>
+            <td class="py-2 px-6 text-left">15.8%</td>
+            <td class="py-2 px-6 text-left">6.3</td>
+            <td class="py-2 px-6 text-left">24.3%</td>
+          </tr>
+
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">Adyen</td>
+            <td class="py-2 px-6 text-left">AFRM</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$17.15</td>
+            <td class="py-2 px-6 text-left">$50.5</td>
+            <td class="py-2 px-6 text-left">49.0%</td>
+            <td class="py-2 px-6 text-left">15.8%</td>
+            <td class="py-2 px-6 text-left">6.3</td>
+            <td class="py-2 px-6 text-left">24.3%</td>
+          </tr>
+
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">Adyen</td>
+            <td class="py-2 px-6 text-left">AFRM</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$17.15</td>
+            <td class="py-2 px-6 text-left">$50.5</td>
+            <td class="py-2 px-6 text-left">49.0%</td>
+            <td class="py-2 px-6 text-left">15.8%</td>
+            <td class="py-2 px-6 text-left">6.3</td>
+            <td class="py-2 px-6 text-left">24.3%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+
+          <tr class="">
+            <td class="py-2 px-6 text-left">Adyen</td>
+            <td class="py-2 px-6 text-left">AFRM</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$17.15</td>
+            <td class="py-2 px-6 text-left">$50.5</td>
+            <td class="py-2 px-6 text-left">49.0%</td>
+            <td class="py-2 px-6 text-left">15.8%</td>
+            <td class="py-2 px-6 text-left">6.3</td>
+            <td class="py-2 px-6 text-left">24.3%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">PayPal</td>
+            <td class="py-2 px-6 text-left">PYPL</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$118.93</td>
+            <td class="py-2 px-6 text-left">$260.5</td>
+            <td class="py-2 px-6 text-left">30.7%</td>
+            <td class="py-2 px-6 text-left">18.9%</td>
+            <td class="py-2 px-6 text-left">8.2</td>
+            <td class="py-2 px-6 text-left">10.4%</td>
+          </tr>
+          <tr class="">
+            <td class="py-2 px-6 text-left">Adyen</td>
+            <td class="py-2 px-6 text-left">AFRM</td>
+            <td class="py-2 px-6 text-left">Payments</td>
+            <td class="py-2 px-6 text-left">$17.15</td>
+            <td class="py-2 px-6 text-left">$50.5</td>
+            <td class="py-2 px-6 text-left">49.0%</td>
+            <td class="py-2 px-6 text-left">15.8%</td>
+            <td class="py-2 px-6 text-left">6.3</td>
+            <td class="py-2 px-6 text-left">24.3%</td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="mt-10 flex flex-col md:flex-row justify-center items-center gap-3 w-full"
+      >
+        <button
+          class="bg-[#2042B6] text-[#fff] text-[16px] font-[400] rounded-full px-[18px] py-[10px] md:p-[18px]"
+        >
+          Download ‘All Companies’ Data
+        </button>
+        <button
+          class="bg-[#2042B6] text-[#fff] text-[16px] font-[400] rounded-full px-[18px] py-[10px] md:p-[18px]"
+        >
+          View Methodology
+        </button>
+      </div>
     </section>
 
-    <script src="./js/script.js"></script>
+    <!-- Potential Future Listings section  -->
+    <section
+      class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-[100vh]"
+    ></section>
+
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
