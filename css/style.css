@@ -1,6 +1,28 @@
 @font-face {
-  font-family: Nantes;
-  src: url(/fonts/MessinaSans-Regular.woff);
+  font-family: nantes;
+  src: url(/fonts/nantes/Nantes-Regular.ttf);
+}
+
+.font-nantes {
+  font-family: nantes, sans-serif;
+}
+
+@font-face {
+  font-family: messina-sans;
+  src: url(/fonts/messina-sans/MessinaSans-Regular.ttf);
+}
+
+.font-messina-sans {
+  font-family: messina-sans, sans-serif;
+}
+
+@font-face {
+  font-family: neue-haas-unica;
+  src: url(/fonts/NeueHaasUnica/NeueHaasUnica-Regular.ttf);
+}
+
+.font-neue-haas-unica {
+  font-family: neue-haas-unica, sans-serif;
 }
 
 * {
@@ -14,10 +36,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 100px;
-} */
-
-/* .hero-para {
-  font-family: Nantes;
 } */
 
 .fixed-header {

@@ -34,7 +34,7 @@ const mainLogo = document.getElementById("main-logo")
 
 
 window.onscroll = () => {
-    if (window.scrollY > 600) {
+    if (window.scrollY > 620) {
         mainHeader.classList.add('sticky-header');
         mainHeader.classList.remove("fixed-header")
 
@@ -160,21 +160,21 @@ function generateMonthWiseTimeSeries(baseval, count, yrange) {
   // slider logics here  
   var swiper = new Swiper('.swiper', {
     slidesPerView: 3,
-    direction: getDirection(),
+    direction: 'horizontal',
     navigation: {
-      nextEl: '.swiper-button-right ',
+      nextEl: '.swiper-button-right',
       prevEl: '.swiper-button-left',
     },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
+    breakpoints: {
+      // when window width is <= 760px
+      760: {
+        slidesPerView: 1,
+        direction: 'horizontal',
       },
+      // when window width is > 760px
+      761: {
+        slidesPerView: 3,
+        direction: 'horizontal',
+      }
     },
   });
-
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-    return direction;
-  }
