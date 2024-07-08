@@ -1,13 +1,24 @@
+@font-face {
+  font-family: Nantes;
+  src: url(/fonts/MessinaSans-Regular.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#main-navbar {
+/* #main-navbar {
   display: flex;
   justify-content: space-between;
-}
+  align-items: center;
+  gap: 100px;
+} */
+
+/* .hero-para {
+  font-family: Nantes;
+} */
 
 .fixed-header {
   position: fixed;
