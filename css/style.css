@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+#main-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
 .fixed-header {
   position: fixed;
   top: 0;
@@ -17,10 +22,10 @@
   top: 0;
   background-color: #f3f3f3;
   color: #191618;
-  height: 60px;
+  height: 100px;
   display: flex;
-  align-items: center;
-  width: 1310px;
+  justify-content: space-between;
+  width: 100%;
   border-radius: 8px;
 }
 
