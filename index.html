@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <title>wp-pool</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
@@ -262,26 +266,33 @@
           <div
             class="absolute right-[10px] md:right-[45px] bottom-[0px] md:bottom-[40px]"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="3.5em"
-              height="3.5em"
-              viewBox="0 0 256 256"
-              class="text-[#2042B6] bg-white rounded-full p-1 md:p-4"
-            >
-              <path
-                fill="currentColor"
-                d="m204.24 148.24l-72 72a6 6 0 0 1-8.48 0l-72-72a6 6 0 0 1 8.48-8.48L122 201.51V40a6 6 0 0 1 12 0v161.51l61.76-61.75a6 6 0 0 1 8.48 8.48"
-              />
-            </svg>
+            <a href="#statistics">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="3.5em"
+                height="3.5em"
+                viewBox="0 0 256 256"
+                class="text-[#2042B6] bg-white rounded-full p-1 md:p-4"
+              >
+                <path
+                  fill="currentColor"
+                  d="m204.24 148.24l-72 72a6 6 0 0 1-8.48 0l-72-72a6 6 0 0 1 8.48-8.48L122 201.51V40a6 6 0 0 1 12 0v161.51l61.76-61.75a6 6 0 0 1 8.48 8.48"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- statistics graph starts here  -->
-    <section class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-full">
-      <div class="mt-[20px] flex flex-col md:flex-row gap-6">
+    <section
+      id="statistics"
+      class="xl:w-[1310px] mx-auto px-[10px] md:px-0 bg-white h-full"
+    >
+      <div
+        class="mt-[20px] flex flex-col md:flex-row gap-6 px-[24px] py-[20px]"
+      >
         <!-- sidebar menu starts here  -->
         <aside
           class="w-full md:w-[224px] h-full md:h-[600px] bg-[#EFF3F6] rounded-[14px] px-2 py-2"
@@ -349,7 +360,7 @@
 
           <!-- - chart stat -->
           <div
-            class="mt-[10px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-[20px]"
+            class="mt-[10px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px]"
           >
             <div
               class="h-[50px] w-[230px] bg-[#F3F3F3] flex justify-between items-center px-[10px] py-[10px] rounded-[6px]"
@@ -409,7 +420,7 @@
               <div
                 class="bg-[#2042B6] w-[178px] h-[26px] flex justify-between items-center text-white px-[10px] py-[9xp] rounded-full"
               >
-                <p class="text-[12px] font-[400]">Sectors</p>
+                Sectors
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -859,12 +870,138 @@
       </div>
     </section>
 
+    <!-- carousel slider section starts here  -->
+    <section
+      class="xl:w-[1310px] h-full md:h-[600px] mx-auto bg-[#EDEDED] mt-[35px] md:mt-[150px] bg-[url('./images/bg-objects/slider-bg.png')] bg-no-repeat bg-center md:bg-right bg-contain"
+    >
+      <div
+        class="px-[10px] md:px-[68px] h-full bg-[url('./images/bg-objects/slider-rectengle.svg')] bg-no-repeat bg-center md:bg-right"
+      >
+        <h1 class="text-[30px] md:text-[48px] font-[400] text-[#191618]">
+          State of USA
+        </h1>
+
+        <div
+          class="select-wrapper w-[200px] h-[58px] bg-[#2042B6] rounded-[124px] mt-[20px]"
+        >
+          <select
+            class="w-full h-full flex items-center justify-center px-[10px] md:px-[20px] bg-[#2042B6] text-white rounded-[124px] text-[14px] md:text-[42px] custom-select"
+          >
+            <option>2024</option>
+            <option>2025</option>
+          </select>
+        </div>
+        <p
+          class="text-[#191618] mt-[15px] text-[16px] font-[350] leading-[160%]"
+        >
+          Click through the slides or download the report to view natively on
+          your device.
+        </p>
+
+        <!-- main slide starts here  -->
+
+        <div class="mt-[20px]">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mr-[20px]">
+                <img
+                  class="w-full h-full"
+                  src="./images/slider-images/slide-1.png"
+                />
+              </div>
+              <div class="swiper-slide mr-[20px]">
+                <img src="./images/slider-images/slide-2.png" />
+              </div>
+              <div class="swiper-slide mr-[20px]">
+                <img src="./images/slider-images/slide-3.png" />
+              </div>
+              <div class="swiper-slide mr-[20px]">
+                <img src="./images/slider-images/slide-1.png" />
+              </div>
+              <div class="swiper-slide mr-[20px]">
+                <img src="./images/slider-images/slide-2.png" />
+              </div>
+              <div class="swiper-slide mr-[20px]">
+                <img src="./images/slider-images/slide-3.png" />
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            class="flex flex-col md:flex-row items-center gap-x-[30px] xl:gap-x-[470px]"
+          >
+            <div
+              class="flex gap-[10px] md:gap-[30px] justify-center md:justify-start items-center"
+            >
+              <!-- swiper buttons to control slides  -->
+              <div class="mt-[0px] flex gap-[20px] mt-[20px]">
+                <div class="swiper-button-left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3em"
+                    height="3em"
+                    viewBox="0 0 256 256"
+                    class="bg-white text-[#2042B6] rounded-full p-[14px]"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M224 128a8 8 0 0 1-8 8H59.31l58.35 58.34a8 8 0 0 1-11.32 11.32l-72-72a8 8 0 0 1 0-11.32l72-72a8 8 0 0 1 11.32 11.32L59.31 120H216a8 8 0 0 1 8 8"
+                    />
+                  </svg>
+                </div>
+                <div class="swiper-button-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3em"
+                    height="3em"
+                    viewBox="0 0 256 256"
+                    class="bg-white text-[#2042B6] rounded-full p-[14px]"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- this is for aligning the page numbers  -->
+              <div class="flex gap-[10px] items-center mt-[25px]">
+                <span class="text-[16px] font-[400]">Pages</span>
+                <select
+                  class="bg-white px-[20px] py-[12px] rounded-full"
+                  name="pages"
+                  id="pages"
+                >
+                  <option class="text-[16px] font-[400]">1 and 2</option>
+                  <option class="text-[16px] font-[400]">2 and 3</option>
+                  <option class="text-[16px] font-[400]">1 and 2</option>
+                  <option class="text-[16px] font-[400]">1 and 2</option>
+                </select>
+
+                <span class="text-[16px] font-[400]">of 37</span>
+              </div>
+            </div>
+
+            <!-- download button  -->
+            <div class="mt-[30px]">
+              <a
+                class="rounded-full px-[12px] py-[10px] md:px-[24px] md:py-[20px] bg-[#2042B6] text-white text-[14px] md:text-[16px] font-[400]"
+                href="#"
+                >Download the 2023 Report</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- stories and ideas section starts here  -->
     <section
-      class="xl:w-[1310px] mx-auto px-[10px] xl:px-[68px] bg-[#EDEDED] h-full pt-[35px] md:pt-[170px]"
+      class="xl:w-[1310px] mx-auto px-[10px] xl:px-[68px] bg-[#EDEDED] h-full pt-[50px] md:pt-[10px]"
     >
       <h1
-        class="text-[#191618] text-center md:text-left text-[30px] md:text-[48px] font-[400] items-center justify-center"
+        class="text-[#191618] text-center md:text-left text-[40px] md:text-[48px] font-[400] items-center justify-center"
       >
         Stories & Ideas
       </h1>
@@ -1061,7 +1198,7 @@
     <section
       class="xl:w-[1180px] mx-auto px-[10px] md:px-[0px] bg-[#EDEDED] h-full mt-[35px] md:mt-[126px]"
     >
-      <h1 class="text-[30px] md:text-[48px] font-[400] text-[#191618]">
+      <h1 class="text-[35px] md:text-[48px] font-[400] text-[#191618]">
         Selected WPPOOL Portfolio Companies
       </h1>
       <div
@@ -1195,9 +1332,11 @@
       class="w-full mx-auto px-[10px] md:px-[10px] bg-[#E6E6E6] h-full mt-[35px] md:mt-[58px] rounded-[12px] py-[30px] md:py-[75px]"
     >
       <div class="xl:w-[1180px] mx-auto">
-        <div class="flex flex-col md:flex-row md:justify-between">
+        <div
+          class="flex flex-col md:flex-row md:justify-between gap-[50px] md:gap-[0px]"
+        >
           <div class="w-[370px] md:w-[454px]">
-            <h2 class="text-[#000] text-[36px] leading-[136%]">
+            <h2 class="text-[#000] text-[20px] md:text-[36px] leading-[136%]">
               Experience remarkable WordPress products with a new level of
               power, beauty, and human-centered designs.
             </h2>
@@ -1205,34 +1344,34 @@
 
           <!-- footer menu here  -->
           <div>
-            <h4>Jump to</h4>
+            <h4 class="text-[20px] text-[#9FA0A1] font-[700]">Jump to</h4>
 
             <ul>
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[16px]">
                 <a href="#"> About Us </a>
               </li>
 
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[10px]">
                 <a href="#"> Portfolio </a>
               </li>
 
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[10px]">
                 <a href="#"> News </a>
               </li>
 
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[10px]">
                 <a href="#"> About Us </a>
               </li>
 
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[10px]">
                 <a href="#"> Stories </a>
               </li>
 
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[10px]">
                 <a href="#"> Jobs </a>
               </li>
 
-              <li>
+              <li class="text-[20px] text-[#115CD9] font-[400] mt-[10px]">
                 <a href="#"> About Us </a>
               </li>
             </ul>
@@ -1241,45 +1380,98 @@
           <!-- footer information here  -->
           <div>
             <div>
-              <h4>Cambridge</h4>
-              <p>70728 Yost Burg,</p>
-              <p>North Magdaleneview,</p>
-              <p>North Magdaleneview,</p>
+              <h4 class="text-[20px] text-[#191618] font-[700]">Cambridge</h4>
+              <p
+                class="w-[260px] mt-[8px] text-[20px] font-[400] leading-[140%]"
+              >
+                70728 Yost Burg, <br />
+                North Magdaleneview, <br />
+                UT 97952-2814
+              </p>
             </div>
 
-            <div>
-              <h4>London</h4>
-              <p>Suite 292 903 Stehr Streets,</p>
-              <p>Langworthtown, SC 94577-9465</p>
+            <div class="h-[1px] width-[260px] mt-[30px] bg-[#9FA0A1]"></div>
+
+            <div class="mt-[24px]">
+              <h4 class="text-[20px] text-[#191618] font-[700]">London</h4>
+              <p
+                class="w-[260px] mt-[8px] text-[20px] font-[400] leading-[140%]"
+              >
+                Suite 292 903 Stehr Streets, Langworthtown, SC 94577-9465
+              </p>
             </div>
 
-            <div>
-              <h4>San Francisco</h4>
-              <p>19837 Gilberto Lodge,</p>
-              <p>Lake Kendallville,</p>
-              <p>Colorado - 97392, Bhutan</p>
+            <div class="h-[1px] width-[260px] mt-[30px] bg-[#9FA0A1]"></div>
+
+            <div class="mt-[24px]">
+              <h4 class="text-[20px] text-[#191618] font-[700]">
+                San Francisco
+              </h4>
+              <p
+                class="w-[260px] mt-[8px] text-[20px] font-[400] leading-[140%]"
+              >
+                19837 Gilberto Lodge, Lake Kendallville, Colorado - 97392,
+                Bhutan
+              </p>
             </div>
+            <div class="h-[1px] width-[260px] mt-[30px] bg-[#9FA0A1]"></div>
           </div>
         </div>
+
+        <!-- description and social  -->
         <div>
-          <ul>
+          <ul
+            class="flex gap-3 mt-[40px] md:mt-[0px] text-[#9FA0A1] text-[14px] font-[700] leading-[136%]"
+          >
             <li>©2024</li>
             <li>Terms of Use</li>
             <li>Privacy Policy</li>
           </ul>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia,molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem. Veritatis obcaecati tenetur iure
-            eius earum ut molestias architecto voluptate aliquam nihil, eveniet
-            aliquid culpa officia aut! Impedit sit sunt quaera
-          </p>
+
+          <div class="flex flex-col md:flex-row justify-between gap-[20px]">
+            <p
+              class="mt-[21px] text-[14px] leading-[136%] font-[400] w-[370px md:w-[520px]"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              mollitia,molestiae quas vel sint commodi repudiandae consequuntur
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+              fugiat iusto fuga praesentium optio, eaque rerum! Provident
+              similique accusantium nemo autem. Veritatis obcaecati tenetur iure
+              eius earum ut molestias architecto voluptate aliquam nihil,
+              eveniet aliquid culpa officia aut! Impedit sit sunt quaera
+            </p>
+            <div class="flex gap-[20px] w-[260px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+              >
+                <path
+                  d="M31.5 6.48529V29.5147C31.5 30.0412 31.2908 30.5462 30.9185 30.9185C30.5462 31.2908 30.0412 31.5 29.5147 31.5H6.48529C5.95876 31.5 5.45379 31.2908 5.08148 30.9185C4.70916 30.5462 4.5 30.0412 4.5 29.5147V6.48529C4.5 5.95876 4.70916 5.45379 5.08148 5.08148C5.45379 4.70916 5.95876 4.5 6.48529 4.5H29.5147C30.0412 4.5 30.5462 4.70916 30.9185 5.08148C31.2908 5.45379 31.5 5.95876 31.5 6.48529ZM12.4412 14.8235H8.47059V27.5294H12.4412V14.8235ZM12.7985 10.4559C12.8006 10.1555 12.7435 9.85773 12.6305 9.57945C12.5175 9.30117 12.3508 9.04787 12.1399 8.83402C11.929 8.62017 11.6781 8.44996 11.4014 8.3331C11.1247 8.21624 10.8277 8.15502 10.5274 8.15294H10.4559C9.8451 8.15294 9.25934 8.39557 8.82746 8.82746C8.39557 9.25934 8.15294 9.8451 8.15294 10.4559C8.15294 11.0667 8.39557 11.6524 8.82746 12.0843C9.25934 12.5162 9.8451 12.7588 10.4559 12.7588C10.7562 12.7662 11.0551 12.7143 11.3354 12.6062C11.6157 12.498 11.872 12.3357 12.0896 12.1285C12.3071 11.9212 12.4817 11.6732 12.6033 11.3984C12.725 11.1237 12.7913 10.8277 12.7985 10.5274V10.4559ZM27.5294 19.8106C27.5294 15.9909 25.0994 14.5059 22.6853 14.5059C21.8949 14.4663 21.1079 14.6347 20.4028 14.9942C19.6977 15.3537 19.0993 15.8917 18.6671 16.5547H18.5559V14.8235H14.8235V27.5294H18.7941V20.7715C18.7367 20.0793 18.9547 19.3925 19.4008 18.8602C19.8469 18.3279 20.485 17.9931 21.1765 17.9285H21.3274C22.59 17.9285 23.5271 18.7226 23.5271 20.7238V27.5294H27.4976L27.5294 19.8106Z"
+                  fill="#9FA0A2"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+              >
+                <path
+                  d="M29.9287 11.8801C29.947 12.1446 29.947 12.409 29.947 12.676C29.947 20.8088 23.7556 30.1884 12.4345 30.1884V30.1836C9.09019 30.1884 5.81536 29.2305 3 27.4243C3.48629 27.4828 3.97502 27.512 4.46496 27.5132C7.23644 27.5157 9.9287 26.5858 12.1091 24.8734C9.47532 24.8234 7.16575 23.1062 6.35893 20.5992C7.28154 20.7771 8.23218 20.7405 9.13772 20.4931C6.2663 19.913 4.20049 17.3901 4.20049 14.4602C4.20049 14.4334 4.20049 14.4078 4.20049 14.3822C5.05606 14.8588 6.01402 15.1232 6.99391 15.1525C4.28946 13.3451 3.45582 9.74725 5.08897 6.93433C8.21389 10.7795 12.8245 13.1171 17.7739 13.3646C17.2779 11.2268 17.9555 8.98674 19.5545 7.48399C22.0335 5.15371 25.9324 5.27315 28.2626 7.7509C29.6411 7.47912 30.9622 6.97333 32.1712 6.25669C31.7118 7.68143 30.7502 8.89167 29.4656 9.66072C30.6856 9.5169 31.8775 9.19027 33 8.69179C32.1737 9.93006 31.1328 11.0087 29.9287 11.8801Z"
+                  fill="#9FA0A2"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/script.js"></script>
   </body>
 </html>
